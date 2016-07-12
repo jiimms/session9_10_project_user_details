@@ -1,4 +1,9 @@
-<h1>Users#show</h1>
+<div class = "row profile">
+	<div class ="col-md-6 col-md-offset-1">
+		<%=@user.name%><br>
+		<%=@user.email%><br>
+		<p class ="profile-page"><%=link_to "Edit Profile", edit_user_path(@user), class: "btn btn-success" %>
+		<%=link_to "back", root_path, class: "btn btn-success" %></p>
 
-<%=@user.name%><br>
-<%=@user.email%>
+	</div>
+</div>

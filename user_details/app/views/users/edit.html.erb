@@ -1,11 +1,18 @@
-<h1>Users#edit</h1>
-<%= form_for @user do |user| %>
-<%= user.label :name%>
-<%= user.text_field :name%>
+<div class = "container edit-page">
+	<div class = "row">
+		<div class ="col-md-6 col-md-offset-3 register_form">
+	<h1>Edit Profile</h1>
+	<%= form_for @user do |user| %>
+		<%= user.label :name%>
+		<%= user.text_field :name, class:"form-control" %>
 
-<%= user.label :email%>
-<%= user.text_field :email%>
+		<%= user.label :email%>
+		<%= user.email_field :email, class:"form-control" %><br>
 
-
-<%=user.submit%>
-<%end%>
+		
+		<%= user.submit "Update", class: "btn btn-success form-control submit_btn" %>
+	<%end%>
+	<p><%= link_to "back", users_path%></p>
+</div>
+</div>
+</div>

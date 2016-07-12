@@ -1,15 +1,30 @@
-<h1>Users#new</h1>
-<%= form_for @user do |user| %>
-<%= user.label :name%>
-<%= user.text_field :name%>
+<div class = "container new-page">
+	<div class = "row">
+		<div class ="col-md-6 col-md-offset-3 register_form">
+			<div>
+				<% if @user.errors.any?%>
+					<ul>
+					<%@user.errors.full_messages.each do |message|%>
+						<li><%= message%></li>
+					<%end%>
+				</ul>
+				<%end%>
+			</div>
+	<h1>Register</h1>
+	<%= form_for @user do |user| %>
+		<%= user.label :name%>
+		<%= user.text_field :name, class:"form-control" %>
 
-<%= user.label :email%>
-<%= user.text_field :email%>
+		<%= user.label :email%>
+		<%= user.email_field :email, class:"form-control" %>
 
-<%= user.label :password%>
-<%= user.text_field :password%>
+		<%= user.label :password%>
+		<%= user.password_field :password, class:"form-control" %>
 
-<%= user.label :confirm_password%>
-<%= user.text_field :confirm_password%>
-<%=user.submit%>
-<%end%>
+		<%= user.label :confirm_password%>
+		<%= user.password_field :confirm_password, class:"form-control" %><br>
+		<%= user.submit "Sign Up", class: "btn btn-success form-control submit_btn" %>
+	<%end%>
+</div>
+</div>
+</div>
