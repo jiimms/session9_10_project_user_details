@@ -10,21 +10,21 @@
 				</ul>
 				<%end%>
 			</div>
-	<h1>Register</h1>
-	<%= form_for @user do |user| %>
-		<%= user.label :name%>
-		<%= user.text_field :name, class:"form-control" %>
+			<h1>Register</h1>
+			<%= form_for @user do |user| %>
+				<%= user.label :name%>
+				<%= user.text_field :name, class:"form-control" %>
 
-		<%= user.label :email%>
-		<%= user.email_field :email, class:"form-control" %>
+				<%= user.label :email%>
+				<%= user.email_field :email, class:"form-control" %>
 
-		<%= user.label :password%>
-		<%= user.password_field :password, class:"form-control" %>
+				<%= user.label :password%>
+				<%= user.password_field :password, class:"form-control" %>
 
-		<%= user.label :confirm_password%>
-		<%= user.password_field :confirm_password, class:"form-control" %><br>
-		<%= user.submit "Sign Up", class: "btn btn-success form-control submit_btn" %>
-	<%end%>
-</div>
-</div>
+				<%= user.label :confirm_password%>
+				<%= user.password_field :confirm_password, class:"form-control" %><br>
+				<%= user.submit "Sign Up", class: "btn btn-success form-control submit_btn" %>
+			<%end%>
+		</div>
+	</div>
 </div>
